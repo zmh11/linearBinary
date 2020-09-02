@@ -1,2 +1,2 @@
 # linearBinary
-homework2 
+homework2 linear and binary search
