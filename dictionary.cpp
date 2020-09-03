@@ -21,12 +21,20 @@ int MinWordLength(string words[]) {
 
 int MaxWordLength(string words[]) {
     // TODO implement this function
-    throw "Unsupported Operation";
+  int max = words[0].length();
+  int word=1;
+  while( !words[word].empty() ){
+    if( max < words[word].length() )
+      max = words[word].length();
+    word++;
+  };
+  return max;
+  throw "Unsupported Operation";
 }
 
 int WordLengthRange(string words[]) {
     // TODO implement this function
-    throw "Unsupported Operation";
+  throw "Unsupported Operation";
 }
 
 int AverageWordLength(string words[]) {
