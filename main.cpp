@@ -16,4 +16,5 @@ int main() {
 
   std::cout << MaxWordLength(words) <<std::endl;
 
+  std::cout << WordLengthRange(words) <<std::endl;
 }

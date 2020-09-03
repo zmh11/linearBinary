@@ -34,6 +34,7 @@ int MaxWordLength(string words[]) {
 
 int WordLengthRange(string words[]) {
     // TODO implement this function
+  return MaxWordLength(words) - MinWordLength(words);
   throw "Unsupported Operation";
 }
 
