@@ -60,5 +60,5 @@ int MostCommonWordLength(string words[], int length) {
     }
   }
   return common_length;
-    throw "Unsupported Operation";
+  throw "Unsupported Operation";
 }

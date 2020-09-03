@@ -1,6 +1,7 @@
 #include <iostream>
 #include "search.h"
 #include "dictionary.h"
+#include "nth_root_finder.h"
 
 int main() {
   int list[] = {1,2,4,5,6,7,8,9};
@@ -23,6 +24,8 @@ int main() {
   std::cout << AverageWordLength(words, 5) <<std::endl;
 
   std::cout << "most commin "<<MostCommonWordLength(words, 5) <<std::endl;
+
+  std::cout << FindNthRoot(25,2,5);
 
 
 
