@@ -3,11 +3,20 @@
 *
 */
 #include <string>
+#include <cstring>
 using namespace std;
 
 int MinWordLength(string words[]) {
     // TODO implement this function
-    throw "Unsupported Operation";
+  int min = words[0].length();
+  int word=1;
+  while( !words[word].empty() ){
+    if( min > words[word].length() )
+      min = words[word].length();
+    word++;
+  };
+  return min;
+  throw "Unsupported Operation";
 }
 
 int MaxWordLength(string words[]) {

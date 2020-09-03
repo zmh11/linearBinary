@@ -1,5 +1,7 @@
 #ifndef DICTIONARY_H
 #define DICTIONARY_H
+#include <string>
+using namespace std;
 
 int MinWordLength(string words[]);
 
