@@ -1,5 +1,25 @@
 /****
 * PSEUDOCODE:
+MinWordLength
+loop array and compare each length
+if the length is smaller that the 
+curent smallest set it as the smallest
+return shortest
+
+MaxWordLength
+loop array and compare each length
+if the length is larger that the last 
+set it as the longest length return longest
+
+WordLegthRange
+return max - min word length
+
+MostCommonWordLength
+loop through array
+loop through rest of array 
+starting at current spot
+count how many times the length is repeated
+if it is repeated the most return that
 *
 */
 #include <string>
