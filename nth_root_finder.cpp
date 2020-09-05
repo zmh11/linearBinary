@@ -41,8 +41,16 @@ string FindNthRoot(int number, int n, int precision) {
     }
   string root = to_string(round);
   root = root.substr(0,count+1+precision);
+  if(precision == 0){
+    root = root.substr(0,count);
+    return root;
+  }
+  if (root.length() == ( count + precision +1))
+    return root;
+  while(root.length() <= ( count + precision +1 )){
+    root+="0";
+  }
   return root;
-
 }
 
 double power( double x, double n){

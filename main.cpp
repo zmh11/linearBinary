@@ -27,8 +27,9 @@ int main() {
 
   std::cout << FindNthRoot(25,2,5)<< std::endl;
 
-   std::cout << FindNthRoot(5,2,6)<< std::endl;
+   std::cout << FindNthRoot(81,2,0)<< std::endl;
 
+std::cout << FindNthRoot(1,1,10)<< std::endl;
 
 
 
