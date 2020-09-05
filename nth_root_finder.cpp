@@ -3,7 +3,9 @@
 loop starting from the middle of the number 
 for everynumber from the middle to loop through 
 n times to check if the root is equal to the number 
-if the root is found turn it in to a string and add the precision
+when the root is found determin how man digits are 
+before the decimal then add the correct precision
+and return the string
 *
 */
 #include <iostream>
@@ -32,9 +34,9 @@ string FindNthRoot(int number, int n, int precision) {
   round = round / per;
   int count =0;
   //used to find length of string to return
-  int k = (int) round;
-      while (k != 0) { 
-        k = k / 10; 
+  int temp_int = (int) round; 
+      while (temp_int != 0) { 
+        temp_int = temp_int / 10; 
         count++; 
     }
   string root = to_string(round);
