@@ -25,7 +25,10 @@ int main() {
 
   std::cout << "most commin "<<MostCommonWordLength(words, 5) <<std::endl;
 
-  std::cout << FindNthRoot(25,2,5);
+  std::cout << FindNthRoot(25,2,5)<< std::endl;
+
+   std::cout << FindNthRoot(5,2,6)<< std::endl;
+
 
 
 

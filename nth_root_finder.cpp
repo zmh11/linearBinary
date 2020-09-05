@@ -11,20 +11,47 @@ if the root is found turn it in to a string and add the precision
 
 using namespace std;
 
+double power( double , double);
+double postive( double );
+
 string FindNthRoot(int number, int n, int precision) {
     // TODO implement this properly
-    int root = number;
-    string rightnum = "";
-    for( int k = 2; k <= number/2; k++){
-      root = 1;
-      for( int i = 1; i <=n; i++){
-        root *= k;
-      }
-    if (root == number)
-      rightnum = to_string(k);
+  double high = number;
+  double low = 1;
+  double guess = (high+low)/2;
+  int per = (int)power(10,precision);
+  double close = power(.1, precision);
+  while (postive(power( guess, n ) - number) > close){
+    if ( power(guess, n) > number )
+      high = guess;
+    else 
+      low = guess;
+    guess = (low + high)/2;
+  };
+  double round = (int)(guess *per +.5);
+  round = round / per;
+  int count =0;
+  //used to find length of string to return
+  int k = (int) round;
+      while (k != 0) { 
+        k = k / 10; 
+        count++; 
     }
-    rightnum +=".";
-    for(int k = 0; k < precision; k++)
-      rightnum += "0";
-    return rightnum;
+  string root = to_string(round);
+  root = root.substr(0,count+1+precision);
+  return root;
+
+}
+
+double power( double x, double n){
+  double power = 1;
+  for (int k = 0; k< n; k++)
+    power *= x;
+  return power;
+}
+
+double postive( double pos){
+  if (pos >= 0)
+    return pos;
+  return pos * (-1);
 }
