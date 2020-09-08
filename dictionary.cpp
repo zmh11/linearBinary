@@ -23,9 +23,8 @@ if it is repeated the most return that
 *
 */
 #include <string>
-using namespace std;
 
-int MinWordLength(string words[], int length) {
+int MinWordLength(std::string words[], int length) {
     // TODO implement this function
   int min = words[0].length();
   for ( int word = 1; word < length; word++){
@@ -36,7 +35,7 @@ int MinWordLength(string words[], int length) {
     throw "Unsupported Operation";
 }
 
-int MaxWordLength(string words[], int length) {
+int MaxWordLength(std::string words[], int length) {
     // TODO implement this function
   int max = words[0].length();
   for ( int word = 1; word < length; word++){
@@ -47,13 +46,13 @@ int MaxWordLength(string words[], int length) {
     throw "Unsupported Operation";
 }
 
-int WordLengthRange(string words[], int length) {
+int WordLengthRange(std::string words[], int length) {
     // TODO implement this function
   return MaxWordLength(words, length) - MinWordLength(words, length);
     throw "Unsupported Operation";
 }
 
-int AverageWordLength(string words[], int length) {
+int AverageWordLength(std::string words[], int length) {
     // TODO implement this function
   int total_length = 0;
   for( int word = 0; word < length; word++ ){
@@ -63,7 +62,7 @@ int AverageWordLength(string words[], int length) {
     throw "Unsupported Operation";
 }
 
-int MostCommonWordLength(string words[], int length) {
+int MostCommonWordLength(std::string words[], int length) {
     // TODO implement this function
   int common_length = 0;
   int number_repeated = 0;

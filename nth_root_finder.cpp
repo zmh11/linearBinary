@@ -11,12 +11,10 @@ and return the string
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 double power( double , double);
 double postive( double );
 
-string FindNthRoot(int number, int n, int precision) {
+std::string FindNthRoot(int number, int n, int precision) {
     // TODO implement this properly
   double high = number;
   double low = 1;
@@ -39,7 +37,7 @@ string FindNthRoot(int number, int n, int precision) {
         temp_int = temp_int / 10; 
         count++; 
     }
-  string root = to_string(round);
+  std::string root = std::to_string(round);
   root = root.substr(0,count+1+precision);
   if(precision == 0){
     root = root.substr(0,count);
