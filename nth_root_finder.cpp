@@ -1,11 +1,18 @@
 /****
 * PSEUDOCODE:
 loop starting from the middle of the number 
-for everynumber from the middle to loop through 
-n times to check if the root is equal to the number 
-when the root is found determin how man digits are 
-before the decimal then add the correct precision
-and return the string
+while the number to the power of n is not 
+to the right precision
+if the power of the number is greater than the
+number set high to guess
+else set low to guess
+
+turn the number into a string get the length to the rght 
+precision. 
+if the number is shorter than the length add a 0
+until it is the precision length.
+
+return string
 *
 */
 #include <iostream>
@@ -50,14 +57,14 @@ std::string FindNthRoot(int number, int n, int precision) {
   }
   return root;
 }
-
+// return the number x to the power of n
 double power( double x, double n){
   double power = 1;
   for (int k = 0; k< n; k++)
     power *= x;
   return power;
 }
-
+// return the double as postive 
 double postive( double pos){
   if (pos >= 0)
     return pos;
